@@ -14,9 +14,5 @@ $ curl --location --request POST 'localhost:8080/todos' \
 >     "content": "なにかやる",
 >     "done": false
 > }'
-ok
-
-# cargo run's console out
-post_todo
-Json: Todo { id: None, content: "なにかやる", done: false }
+ok # cargo run's console print
 ```
