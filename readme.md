@@ -1,8 +1,18 @@
 # simple-api-rust
 
-### memo
+```bash
+$ cargo run
+```
 
 ```bash
-curl -X POST -H "Content-Type: application/json" localhost:8080/todos
-curl -sS -w '\n' -X POST 'localhost:8080/todos'
+$ curl http://localhost:8080/todos/123
+{"id":123,"content":"やること","done":false}
+
+$ curl --location --request POST 'localhost:8080/todos' \
+> --header 'Content-Type: application/json' \
+> --data-raw '{
+>     "content": "なにかやる",
+>     "done": false
+> }'
+ok # cargo run's console print
 ```
